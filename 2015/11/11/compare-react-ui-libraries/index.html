@@ -1,0 +1,879 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="React," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="IntroGot to pick a UI framework for work. The hopeful gain are unified beautiful design and quicker development. The possible loss could be performance, bugs, learning the framework, risk of unsupport">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Compare React UI Frameworks">
+<meta property="og:url" content="http://xubuild.github.io/2015/11/11/compare-react-ui-libraries/index.html">
+<meta property="og:site_name" content="XUBUILD">
+<meta property="og:description" content="IntroGot to pick a UI framework for work. The hopeful gain are unified beautiful design and quicker development. The possible loss could be performance, bugs, learning the framework, risk of unsupport">
+<meta property="og:updated_time" content="2016-04-06T08:51:43.767Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Compare React UI Frameworks">
+<meta name="twitter:description" content="IntroGot to pick a UI framework for work. The hopeful gain are unified beautiful design and quicker development. The possible loss could be performance, bugs, learning the framework, risk of unsupport">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> Compare React UI Frameworks | XUBUILD </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+<div class="site-fancy-title">
+      <svg viewBox="0 0 1320 300">
+
+        <!-- Symbol -->
+        <symbol id="s-text">
+          <text text-anchor="middle"
+                x="50%" y="50%" dy=".35em">
+            XUBUILD
+          </text>
+        </symbol>  
+
+        <!-- Duplicate symbols -->
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+
+      </svg>
+      </div>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Compare React UI Frameworks
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-11T00:00:00+00:00" content="2015-11-11">
+              2015-11-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Dev/" itemprop="url" rel="index">
+                    <span itemprop="name">Dev</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Got to pick a UI framework for work. The hopeful gain are unified beautiful design and quicker development. The possible loss could be performance, bugs, learning the framework, risk of unsupported in future, etc.</p>
+<p>Where I found the candidates:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/23380903/existing-ui-libraries-to-use-with-react-js" target="_blank" rel="external">Existing UI libraries to use with React.js?</a></li>
+<li><a href="https://github.com/enaqx/awesome-react" target="_blank" rel="external">awesome-react</a></li>
+<li>Google</li>
+</ul>
+<p>I will only look at the frameworks having GitHub stars &gt; 100.</p>
+<p>Quick conclusion: There is no super solid framework there, but <a href="#material-ui">Material UI</a> and <a href="#react-toolbox">React toolbox</a> are probably more ready.</p>
+<a id="more"></a>
+<h2 id="Selection-criteria"><a href="#Selection-criteria" class="headerlink" title="Selection criteria"></a>Selection criteria</h2><ul>
+<li>Basics: <ul>
+<li>[ ] dropdownlist / select</li>
+<li>[ ] date picker</li>
+<li>[ ] time picker</li>
+<li>[ ] tab</li>
+<li>[ ] <a href="http://callmenick.com/_development/slide-push-menus/" target="_blank" rel="external">slide in menu</a></li>
+<li>[ ] dialog / modal / pop up window</li>
+<li>[ ] dropdown menu</li>
+<li>[ ] table</li>
+<li>[ ] responsive</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[ ] loading indicator</li>
+<li>[ ] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[ ] theme</li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS)</li>
+<li>[ ] use ES6 and class syntax</li>
+<li>[ ] compatible with React 0.14 (ref) </li>
+<li>[ ] actively updated and supported</li>
+<li>[ ] should not have bug that broke the whole software reported in GitHub issues</li>
+<li>[ ] open source</li>
+</ul>
+<h2 id="Candidates"><a href="#Candidates" class="headerlink" title="Candidates"></a>Candidates</h2><p>NOTE: The GitHub data is collected on Nov 11, 2015.</p>
+<ul>
+<li><a href="http://material-ui.com/#/components/appbar" target="_blank" rel="external">Material UI</a>, <a href="https://github.com/callemall/material-ui" target="_blank" rel="external">GitHub</a>, 11715 stars, 222 contributors, (22 contributors &gt;10 commits)</li>
+<li><a href="http://react-toolbox.com/#/components" target="_blank" rel="external">React toolbox</a>, <a href="https://github.com/react-toolbox/react-toolbox" target="_blank" rel="external">GitHub</a>, 1981 stars, 7 contributors, (3 contributors &gt;10 commits)</li>
+<li><a href="http://react-bootstrap.github.io/components.html" target="_blank" rel="external">React Bootstrap</a>, <a href="https://github.com/react-bootstrap/react-bootstrap" target="_blank" rel="external">GitHub</a>, 3869 stars, 127 contributors, (6 contributors &gt;10 commits)</li>
+<li><a href="http://www.grommet.io/docs/develop/get-started" target="_blank" rel="external">Grommet</a>, <a href="https://github.com/grommet/grommet" target="_blank" rel="external">GitHub</a>, 188 stars, 24 contributors, (8 contributors &gt;10 commits)</li>
+<li><a href="http://elemental-ui.com/home" target="_blank" rel="external">Elemental UI</a>, <a href="https://github.com/elementalui/elemental" target="_blank" rel="external">GitHub</a>, 1755 stars, 16 contributors</li>
+<li><a href="http://nikgraf.github.io/belle/#/component/combo-box" target="_blank" rel="external">Belle</a>, <a href="https://github.com/nikgraf/belle/" target="_blank" rel="external">GitHub</a>, 1060 stars, 12 contributors</li>
+<li><a href="http://khan.github.io/react-components/" target="_blank" rel="external">React Components by Khan Academy</a>, <a href="https://github.com/Khan/react-components" target="_blank" rel="external">GitHub</a>, 574 stars, 17 contributors</li>
+</ul>
+<p>Not tested: </p>
+<ul>
+<li><a href="http://touchstonejs.io/" target="_blank" rel="external">TouchstoneJS</a>, <a href="https://github.com/touchstonejs/touchstonejs" target="_blank" rel="external">GitHub</a>, 2626 stars, 10 contributors. The demo and doc is under development. </li>
+<li><a href="http://lobos.github.io/react-ui/" target="_blank" rel="external">REACT UI</a>, <a href="https://github.com/Lobos/react-ui" target="_blank" rel="external">GitHub</a>, 294 stars, 1 contributor. Only 1 contributor, a bit worried.</li>
+<li><a href="http://reapp.io/start.html" target="_blank" rel="external">Reapp</a>, <a href="https://github.com/reapp/reapp" target="_blank" rel="external">GitHub</a>, 2970 stars, 14 contributors. It’s intended for hybrid apps, no desktop demo, lacks components.</li>
+</ul>
+<p>Here are some Chinese frameworks:</p>
+<ul>
+<li>[Amaze UI] (<a href="http://amazeui.org/react/components" target="_blank" rel="external">http://amazeui.org/react/components</a>), <a href="https://github.com/amazeui/amazeui-react" target="_blank" rel="external">GitHub</a> 474 stars, 5 contributors</li>
+<li><a href="http://uxco.re/components/button/" target="_blank" rel="external">UXCore</a>, <a href="https://github.com/uxcore" target="_blank" rel="external">GitHub</a></li>
+<li><a href="http://ant.design/docs/introduce" target="_blank" rel="external">Ant Design by Ant Financial (Alibaba)</a>, <a href="https://github.com/ant-design/ant-design" target="_blank" rel="external">GitHub</a>, 1549 stars, 36 contributors</li>
+</ul>
+<h2 id="Go-through"><a href="#Go-through" class="headerlink" title="Go through"></a>Go through</h2><p><a name="material-ui"></a></p>
+<h3 id="Material-UI"><a href="#Material-UI" class="headerlink" title="Material UI"></a>Material UI</h3><ul>
+<li><a href="http://material-ui.com/#/components/appbar" target="_blank" rel="external">material-ui</a> </li>
+<li><a href="https://github.com/callemall/material-ui" target="_blank" rel="external">GitHub</a></li>
+<li><p>11715 stars, 222 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[X] dropdownlist / select</li>
+<li>[X] date picker</li>
+<li>[X] time picker</li>
+<li>[X] tab</li>
+<li>[X] slide in menu</li>
+<li>[X] dialog / modal / popup window</li>
+<li>[X] dropdown menu</li>
+<li>[X] table</li>
+<li>[X] responsive</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[X] loading indicator</li>
+<li>[ ] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[X] theme (<strong>partly support</strong>)</li>
+</ul>
+</li>
+<li>[X] tested working for new browsers (Chrome, IE11, IOS) (<a href="https://github.com/callemall/material-ui/issues/1563" target="_blank" rel="external"><strong>ripple effect appear twice in iPhone</strong></a>, ripple effect not working in IE 11)</li>
+<li>[ ] use ES6 and class syntax </li>
+<li>[X] compatible with React 0.14</li>
+<li>[X] actively updated and supported</li>
+<li>[X] should not have major bug reported in GitHub issues ()</li>
+<li>[X] open source</li>
+</ul>
+<p>This is almost the most popular one, and it looks really beautiful with material design.  </p>
+<p><a name="react-toolbox"></a></p>
+<h3 id="React-toolbox"><a href="#React-toolbox" class="headerlink" title="React toolbox"></a>React toolbox</h3><ul>
+<li><a href="http://react-toolbox.com/#/components" target="_blank" rel="external">React toolbox</a> </li>
+<li><a href="https://github.com/react-toolbox/react-toolbox" target="_blank" rel="external">GitHub</a> </li>
+<li><p>1981 stars, 7 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[X] dropdownlist / select</li>
+<li>[X] date picker</li>
+<li>[X] time picker</li>
+<li>[X] tab</li>
+<li>[X] slide in menu</li>
+<li>[X] dialog / modal / popup window</li>
+<li>[X] dropdown menu</li>
+<li>[X] table</li>
+<li>[X] responsive (<strong>not sure</strong>)</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[ ] loading indicator</li>
+<li>[X] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[X] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[X] theme (<strong>partly supported</strong>)</li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS) (<strong>“Autocomplete” page’s playground will get ‘TypeError’ using IE 11</strong>) </li>
+<li>[X] use ES6 and class syntax </li>
+<li>[ ] compatible with React 0.14 (<strong>not sure</strong>)</li>
+<li>[X] actively updated and supported </li>
+<li>[X] should not have major bug reported in GitHub issues</li>
+<li>[X] open source</li>
+</ul>
+<p>Material Design, CSS Modules, ES6 syntax, seems promising.</p>
+<p><a name="react-bootstrap"></a></p>
+<h3 id="React-Bootstrap"><a href="#React-Bootstrap" class="headerlink" title="React Bootstrap"></a>React Bootstrap</h3><ul>
+<li><a href="http://react-bootstrap.github.io/components.html" target="_blank" rel="external">React Bootstrap</a> </li>
+<li><a href="https://github.com/react-bootstrap/react-bootstrap" target="_blank" rel="external">GitHub</a> </li>
+<li><p>3869 stars, 127 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[ ] dropdownlist / select</li>
+<li>[ ] date picker</li>
+<li>[ ] time picker</li>
+<li>[X] tab</li>
+<li>[ ] slide in menu</li>
+<li>[X] dialog / modal / popup window</li>
+<li>[ ] dropdown menu</li>
+<li>[ ] table</li>
+<li>[ ] responsive (not sure)</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[ ] loading indicator</li>
+<li>[ ] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[ ] theme<br>(<strong>the following is not tested due to too few components</strong>)</li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS) (<strong>“Autocomplete” page’s playground will get ‘TypeError’ using IE 11</strong>) </li>
+<li>[ ] use ES6 and class syntax </li>
+<li>[ ] compatible with React 0.14 (seems so)</li>
+<li>[ ] actively updated and supported </li>
+<li>[ ] should not have major bug reported in GitHub issues</li>
+<li>[ ] open source</li>
+</ul>
+<p><a name="grommet"></a></p>
+<h3 id="Grommet"><a href="#Grommet" class="headerlink" title="Grommet"></a>Grommet</h3><ul>
+<li><a href="http://www.grommet.io/docs/develop/get-started" target="_blank" rel="external">Grommet</a> </li>
+<li><a href="https://github.com/grommet/grommet" target="_blank" rel="external">GitHub</a> </li>
+<li><p>188 stars, 24 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[X] dropdownlist / select</li>
+<li>[X] date picker</li>
+<li>[ ] time picker</li>
+<li>[X] tab</li>
+<li>[X] slide in menu</li>
+<li>[X] dialog / modal / popup window</li>
+<li>[X] dropdown menu</li>
+<li>[X] table</li>
+<li>[X] responsive</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[X] loading indicator</li>
+<li>[ ] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[X] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[ ] theme </li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS) (<a href="http://www.grommet.io/docs/develop/tabs" target="_blank" rel="external"><strong>“tab” is not working in Chrome</strong></a>)</li>
+<li>[ ] use ES6 and class syntax </li>
+<li>[X] compatible with React 0.14</li>
+<li>[ ] actively updated and supported (<strong>lots of issues with no response</strong>)</li>
+<li>[ ] should not have major bug reported in GitHub issues ()</li>
+<li>[X] open source</li>
+</ul>
+<p>Not recommend, although it is actively updated, it seems that it lacks support and has bugs.</p>
+<p><a name="elemental-ui"></a></p>
+<h3 id="Elemental-UI"><a href="#Elemental-UI" class="headerlink" title="Elemental UI"></a>Elemental UI</h3><ul>
+<li><a href="http://elemental-ui.com/home" target="_blank" rel="external">Elemental UI</a> </li>
+<li><a href="https://github.com/elementalui/elemental" target="_blank" rel="external">GitHub</a> </li>
+<li><p>1755 stars, 16 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[X] dropdownlist / select</li>
+<li>[ ] date picker</li>
+<li>[ ] time picker</li>
+<li>[ ] tab</li>
+<li>[ ] slide in menu</li>
+<li>[X] dialog / modal / popup window</li>
+<li>[ ] dropdown menu</li>
+<li>[X] table</li>
+<li>[X] responsive</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[X] loading indicator</li>
+<li>[ ] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[ ] theme<br>(<strong>the following is not tested due to too few components</strong>)</li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS) </li>
+<li>[ ] use ES6 and class syntax </li>
+<li>[ ] compatible with React 0.14</li>
+<li>[ ] actively updated and supported (<strong>Latest commit 27 days ago</strong>)</li>
+<li>[ ] should not have major bug reported in GitHub issues ()</li>
+<li>[ ] open source</li>
+</ul>
+<p>This framework has a bootstrap-like look, but it contains too few components.</p>
+<p><a name="belle"></a></p>
+<h3 id="Belle"><a href="#Belle" class="headerlink" title="Belle"></a>Belle</h3><ul>
+<li><a href="http://nikgraf.github.io/belle/#/component/combo-box" target="_blank" rel="external">Belle</a> </li>
+<li><a href="https://github.com/nikgraf/belle/" target="_blank" rel="external">GitHub</a> </li>
+<li><p>1060 stars, 12 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[X] dropdownlist / select</li>
+<li>[X] date picker</li>
+<li>[ ] time picker</li>
+<li>[ ] tab</li>
+<li>[ ] slide in menu</li>
+<li>[ ] dialog / modal / popup window</li>
+<li>[ ] dropdown menu</li>
+<li>[ ] table</li>
+<li>[ ] responsive (not sure)</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[ ] loading indicator</li>
+<li>[X] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[X] theme<br>(<strong>the following is not tested due to too few components</strong>)</li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS) </li>
+<li>[ ] use ES6 and class syntax </li>
+<li>[ ] compatible with React 0.14</li>
+<li>[ ] actively updated and supported </li>
+<li>[ ] should not have major bug reported in GitHub issues ()</li>
+<li>[ ] open source</li>
+</ul>
+<p>This framework has a nice flat material-like look, but it contains too few components.</p>
+<p><a name="react-components-by-khan-academy"></a></p>
+<h3 id="React-Components-by-Khan-Academy"><a href="#React-Components-by-Khan-Academy" class="headerlink" title="React Components by Khan Academy"></a>React Components by Khan Academy</h3><ul>
+<li><a href="http://khan.github.io/react-components/" target="_blank" rel="external">React Components by Khan Academy</a> </li>
+<li><a href="https://github.com/Khan/react-components" target="_blank" rel="external">GitHub</a> </li>
+<li><p>574 stars, 17 contributors</p>
+</li>
+<li><p>Basics: </p>
+<ul>
+<li>[X] dropdownlist / select</li>
+<li>[ ] date picker</li>
+<li>[ ] time picker</li>
+<li>[ ] tab</li>
+<li>[ ] slide in menu</li>
+<li>[X] dialog / modal / popup window</li>
+<li>[ ] dropdown menu</li>
+<li>[ ] table</li>
+<li>[ ] responsive (not sure)</li>
+</ul>
+</li>
+<li>Extra:<ul>
+<li>[ ] loading indicator</li>
+<li>[ ] dropdownlist / select with search/filter function (autocomplete)</li>
+<li>[ ] multi-select</li>
+<li>[ ] chart</li>
+<li>[ ] table with sorting, filtering</li>
+<li>[ ] gridster layout</li>
+<li>[ ] theme<br>(<strong>the following is not tested due to too few components</strong>)</li>
+</ul>
+</li>
+<li>[ ] tested working for new browsers (Chrome, IE11, IOS) </li>
+<li>[ ] use ES6 and class syntax </li>
+<li>[ ] compatible with React 0.14</li>
+<li>[ ] actively updated and supported </li>
+<li>[ ] should not have major bug reported in GitHub issues ()</li>
+<li>[ ] open source</li>
+</ul>
+<p>The development seems very organized and professional. But it contains too few components. Some of them are mixins.</p>
+<p>NOTE: It contains:</p>
+<ul>
+<li>drag and drop</li>
+<li>Sortable</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>There are many more frameworks like <a href="http://semantic-ui.com/" target="_blank" rel="external">Semantic UI</a> which are more focused on CSS, but they needs wrapping is the component needs JS. It turns out clearly after the compare: <a href="#material-ui">Material UI</a> and <a href="#react-toolbox">React toolbox</a> are the ones that are ahead.</p>
+<p><a href="http://ant.design/docs/introduce" target="_blank" rel="external">Ant Design by Ant Financial (Alibaba)</a>, <a href="https://github.com/ant-design/ant-design" target="_blank" rel="external">GitHub</a>, 1549 stars, 36 contributors<br>This framework gets lots of attention in China because of the team’s technical background.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag">#React</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/02/promise-and-how-to-do-ajax-request/" rel="next" title="Promise (Tutorials Dehydrated) and ajax request library">
+                <i class="fa fa-chevron-left"></i> Promise (Tutorials Dehydrated) and ajax request library
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="xubuild" />
+          <p class="site-author-name" itemprop="name">xubuild</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro"><span class="nav-number">1.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selection-criteria"><span class="nav-number">2.</span> <span class="nav-text">Selection criteria</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Candidates"><span class="nav-number">3.</span> <span class="nav-text">Candidates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-through"><span class="nav-number">4.</span> <span class="nav-text">Go through</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Material-UI"><span class="nav-number">4.1.</span> <span class="nav-text">Material UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React-toolbox"><span class="nav-number">4.2.</span> <span class="nav-text">React toolbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React-Bootstrap"><span class="nav-number">4.3.</span> <span class="nav-text">React Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grommet"><span class="nav-number">4.4.</span> <span class="nav-text">Grommet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elemental-UI"><span class="nav-number">4.5.</span> <span class="nav-text">Elemental UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Belle"><span class="nav-number">4.6.</span> <span class="nav-text">Belle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React-Components-by-Khan-Academy"><span class="nav-number">4.7.</span> <span class="nav-text">React Components by Khan Academy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">5.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xubuild</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

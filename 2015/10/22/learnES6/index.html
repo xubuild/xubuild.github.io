@@ -1,0 +1,692 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS,ES6,dehydration," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="DisclaimerThis post is a dehydration and restructuring of different tutorials and most content are copied WITHOUT quotation for easier reading. The references are listed at the beginning of each part">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learn ES6 - Tutorials Dehydrated (WIP)">
+<meta property="og:url" content="http://xubuild.github.io/2015/10/22/learnES6/index.html">
+<meta property="og:site_name" content="XUBUILD">
+<meta property="og:description" content="DisclaimerThis post is a dehydration and restructuring of different tutorials and most content are copied WITHOUT quotation for easier reading. The references are listed at the beginning of each part">
+<meta property="og:updated_time" content="2016-04-06T08:51:43.767Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learn ES6 - Tutorials Dehydrated (WIP)">
+<meta name="twitter:description" content="DisclaimerThis post is a dehydration and restructuring of different tutorials and most content are copied WITHOUT quotation for easier reading. The references are listed at the beginning of each part">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> Learn ES6 - Tutorials Dehydrated (WIP) | XUBUILD </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+<div class="site-fancy-title">
+      <svg viewBox="0 0 1320 300">
+
+        <!-- Symbol -->
+        <symbol id="s-text">
+          <text text-anchor="middle"
+                x="50%" y="50%" dy=".35em">
+            XUBUILD
+          </text>
+        </symbol>  
+
+        <!-- Duplicate symbols -->
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+
+      </svg>
+      </div>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Learn ES6 - Tutorials Dehydrated (WIP)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-10-22T00:00:00+00:00" content="2015-10-22">
+              2015-10-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Dev/" itemprop="url" rel="index">
+                    <span itemprop="name">Dev</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h2><p>This post is a dehydration and restructuring of different tutorials and most content are copied WITHOUT quotation for easier reading. The references are listed at the beginning of each part and all credits go to those nice articles!</p>
+<a id="more"></a>
+<h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p>It is not fully supported by all browsers yet (2015.10), check the <a href="https://kangax.github.io/compat-table/es6/" target="_blank" rel="external">compatibility</a>.</p>
+<h2 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h2><p><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/" target="_blank" rel="external">ES6 In Depth: Modules</a></p>
+<p>An ES6 module is a file containing JS code, plus:</p>
+<ul>
+<li>ES6 modules are automatically strict-mode code, even if you don’t write “use strict”; in them.</li>
+<li>You can use <code>import</code> and <code>export</code> in modules.</li>
+</ul>
+<h3 id="Export"><a href="#Export" class="headerlink" title="Export"></a>Export</h3><p>You can <code>export</code> any top-level <code>function</code>, <code>class</code>, <code>var</code>, <code>let</code>, or <code>const</code>.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Export-list"><a href="#Export-list" class="headerlink" title="Export list"></a>Export list</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;foo1, foo2&#125;;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h4 id="Renaming"><a href="#Renaming" class="headerlink" title="Renaming"></a>Renaming</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">  v1 <span class="keyword">as</span> streamV1,</span><br><span class="line">  v2 <span class="keyword">as</span> streamV2,</span><br><span class="line">  v2 <span class="keyword">as</span> streamLatestVersion</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h4><p>to have a default export:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;myObject <span class="keyword">as</span> <span class="keyword">default</span>&#125;;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  field1: value1,</span><br><span class="line">  field2: value2</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Import"><a href="#Import" class="headerlink" title="Import"></a>Import</h3><p><code>import {</code> function, class, var, let, or const `} from “sth.js”;``</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;sth&#125; <span class="keyword">from</span> <span class="string">"sth.js"</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="Renaming-1"><a href="#Renaming-1" class="headerlink" title="Renaming"></a>Renaming</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;flip <span class="keyword">as</span> flipOmelet&#125; <span class="keyword">from</span> <span class="string">"eggs.js"</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="From-CommonJS-and-AMD-module"><a href="#From-CommonJS-and-AMD-module" class="headerlink" title="From CommonJS and AMD module"></a>From CommonJS and AMD module</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">"lodash"</span>;</span><br></pre></td></tr></table></figure>
+<p>This shorthand is equivalent to <code>import {default as _} from &quot;lodash&quot;;</code>. All CommonJS and AMD modules are presented to ES6 as having and only having a default export, which is the same thing that you would get if you asked <code>require()</code> for that module.</p>
+<h4 id="Import-1"><a href="#Import-1" class="headerlink" title="Import *"></a>Import *</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> cows <span class="keyword">from</span> <span class="string">"cows"</span>;</span><br></pre></td></tr></table></figure>
+<p>When you <code>import *</code>, what’s imported is a <strong>module namespace object</strong>. Its <strong>properties</strong> are the module’s <strong>exports</strong>. So if the “cows” module exports a function named <code>moo()</code>, then after importing “cows” this way, you can write: <code>cows.moo()</code>.</p>
+<h3 id="Aggregating-modules"><a href="#Aggregating-modules" class="headerlink" title="Aggregating modules"></a>Aggregating modules</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// world-foods.js - good stuff from all over the world</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// import "sri-lanka" and re-export some of its exports</span></span><br><span class="line"><span class="keyword">export</span> &#123;Tea, Cinnamon&#125; <span class="keyword">from</span> <span class="string">"sri-lanka"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// import "equatorial-guinea" and re-export some of its exports</span></span><br><span class="line"><span class="keyword">export</span> &#123;Coffee, Cocoa&#125; <span class="keyword">from</span> <span class="string">"equatorial-guinea"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// import "singapore" and export ALL of its exports</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">"singapore"</span>;</span><br></pre></td></tr></table></figure>
+<p>Each one of these <code>export-from</code> statements is similar to an <code>import-from</code> statement followed by an <code>export</code>. Unlike a real import, this doesn’t add the re-exported bindings to your scope. So don’t use this shorthand if you plan to write some code in <code>world-foods.js</code> that makes use of <code>Tea</code>. You’ll find that it’s not there.</p>
+<p>If any name exported by “singapore” happened to collide with the other exports, that would be an error.</p>
+<h3 id="What-does-import-actually-do"><a href="#What-does-import-actually-do" class="headerlink" title="What does import actually do?"></a>What does import actually do?</h3><p>Nothing… ES6 leaves the details of module loading entirely up to the implementation. </p>
+<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><ul>
+<li><a href="http://www.2ality.com/2015/02/es6-classes-final.html" target="_blank" rel="external">Classes in ECMAScript 6</a></li>
+<li><a href="https://strongloop.com/strongblog/an-introduction-to-JavaScript-es6-classes/" target="_blank" rel="external">An Introduction To JavaScript ES6 Classes</a></li>
+</ul>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">&#125;</span><br><span class="line">toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPoint</span> <span class="keyword">extends</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y, color) &#123;</span><br><span class="line">    <span class="keyword">super</span>(x, y);</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br><span class="line">toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.toString() + <span class="string">' in '</span> + <span class="keyword">this</span>.color;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cp = <span class="keyword">new</span> ColorPoint(<span class="number">25</span>, <span class="number">8</span>, <span class="string">'green'</span>);</span><br><span class="line">cp.toString(); <span class="comment">// '(25, 8) in green'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(cp <span class="keyword">instanceof</span> ColorPoint); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(cp <span class="keyword">instanceof</span> Point); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h3 id="Definition-and-Class-expression"><a href="#Definition-and-Class-expression" class="headerlink" title="Definition and Class expression"></a>Definition and Class expression</h3><p>Function declarations are <strong>hoisted</strong>: When entering a scope, the functions that are declared in it are immediately available – independently of where the declarations happen. That means that you can call a function that is declared later.<br>class declarations are <strong>not hoisted</strong>. Therefore, a class only exists after execution reached its definition and it was evaluated. Accessing it beforehand leads to a ReferenceError.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Vehicle = <span class="class"><span class="keyword">class</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Vehicle = <span class="class"><span class="keyword">class</span> <span class="title">VehicleClass</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="comment">// VehicleClass is only available inside the class itself</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(prop) &#123;</span><br><span class="line">    <span class="keyword">this</span>.prop = prop;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">static</span> staticMethod() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'classy'</span>;</span><br><span class="line">&#125;</span><br><span class="line">prototypeMethod() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'prototypical'</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> foo = <span class="keyword">new</span> Foo(<span class="number">123</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h4><p>It defines the function that represents the class:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Foo === Foo.prototype.constructor</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; <span class="keyword">typeof</span> Foo</span><br><span class="line"><span class="string">'function'</span></span><br></pre></td></tr></table></figure>
+<p>You can override the result of a constructor by explicitly returning an object:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.create(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Foo() <span class="keyword">instanceof</span> Foo); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h4 id="Static-method"><a href="#Static-method" class="headerlink" title="Static method"></a>Static method</h4><p><code>static</code> properties (or class properties) are properties of Foo itself</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">typeof</span> Foo.staticMethod</span><br><span class="line"><span class="string">'function'</span></span><br><span class="line">&gt; Foo.staticMethod()</span><br><span class="line"><span class="string">'classy'</span></span><br></pre></td></tr></table></figure>
+<h4 id="Prototype-method"><a href="#Prototype-method" class="headerlink" title="Prototype method"></a>Prototype method</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">typeof</span> Foo.prototype.prototypeMethod</span><br><span class="line"><span class="string">'function'</span></span><br><span class="line">&gt; foo.prototypeMethod()</span><br><span class="line"><span class="string">'prototypical'</span></span><br></pre></td></tr></table></figure>
+<h4 id="Getters-and-setters"><a href="#Getters-and-setters" class="headerlink" title="Getters and setters"></a>Getters and setters</h4><p>As in <a href="http://speakingjs.com/es5/ch17.html#getters_setters" target="_blank" rel="external">ECMAScript 5 object literals</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">  get prop() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'getter'</span>;</span><br><span class="line">&#125;</span><br><span class="line">set prop(value) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setter: '</span>+value);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Computed-method-names"><a href="#Computed-method-names" class="headerlink" title="Computed method names"></a>Computed method names</h4><p>The following ways of defining <code>Foo</code> are all equivalent:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Foo() &#123;</span><br><span class="line">  myMethod() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Foo() &#123;</span><br><span class="line">  [&apos;my&apos;+&apos;Method&apos;]() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const m = &apos;myMethod&apos;;</span><br><span class="line">class Foo() &#123;</span><br><span class="line">  [m]() &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Symbols-in-method-name"><a href="#Symbols-in-method-name" class="headerlink" title="Symbols in method name"></a>Symbols in method name</h4><p>Several special methods in ECMAScript 6 have keys that are <em>symbols</em>. Computed method names allow you to define such methods. For example, if an object has a method whose key is Symbol.iterator, it is <em>iterable</em>. That means that its contents can be iterated over by the for-of loop and other language mechanisms.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IterableClass</span> </span>&#123;</span><br><span class="line">  [<span class="built_in">Symbol</span>.iterator]() &#123;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Generator-method"><a href="#Generator-method" class="headerlink" title="Generator method"></a>Generator method</h4><p>A generator is useful for defining the method whose key is <code>Symbol.iterator</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IterableArguments</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(...args) &#123;</span><br><span class="line">    <span class="keyword">this</span>.args = args;</span><br><span class="line">&#125;</span><br><span class="line">* [<span class="built_in">Symbol</span>.iterator]() &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> arg <span class="keyword">of</span> <span class="keyword">this</span>.args) &#123;</span><br><span class="line">      <span class="keyword">yield</span> arg;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> x <span class="keyword">of</span> <span class="keyword">new</span> IterableArguments(<span class="string">'hello'</span>, <span class="string">'world'</span>)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Output:</span></span><br><span class="line"><span class="comment">// hello</span></span><br><span class="line"><span class="comment">// world</span></span><br></pre></td></tr></table></figure>
+<h3 id="Subclassing"><a href="#Subclassing" class="headerlink" title="Subclassing"></a>Subclassing</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">&#125;</span><br><span class="line">toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPoint</span> <span class="keyword">extends</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y, color) &#123;</span><br><span class="line">    <span class="keyword">super</span>(x, y); </span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br><span class="line">toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.toString() + <span class="string">' in '</span> + <span class="keyword">this</span>.color; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">Object</span>.getPrototypeOf(ColorPoint) === Point</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; <span class="keyword">let</span> cp = <span class="keyword">new</span> ColorPoint(<span class="number">25</span>, <span class="number">8</span>, <span class="string">'green'</span>);</span><br><span class="line">&gt; cp <span class="keyword">instanceof</span> ColorPoint</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; cp <span class="keyword">instanceof</span> Point</span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>Using <code>extends</code> to extend, <code>static</code> properties are inherited:</p>
+<p>Using <code>super</code>:</p>
+<ul>
+<li>In class constructor: function call.</li>
+<li>In method definitions: property references (super.prop) or method calls (super.method(···)).</li>
+</ul>
+<p>In a derived class, you must call <code>super()</code> before you can use <code>this</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span> <span class="keyword">extends</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(num) &#123;</span><br><span class="line">    <span class="keyword">let</span> tmp = num * <span class="number">2</span>; <span class="comment">// OK</span></span><br><span class="line">    <span class="keyword">this</span>.num = num; <span class="comment">// ReferenceError</span></span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line">    <span class="keyword">this</span>.num = num; <span class="comment">// OK</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Subclassing-built-in-constructors"><a href="#Subclassing-built-in-constructors" class="headerlink" title="Subclassing built-in constructors"></a>Subclassing built-in constructors</h4><p>Subclassing built-in constructors is something that engines have to support natively, you won’t get this feature via transpilers.</p>
+<h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><ul>
+<li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/" target="_blank" rel="external">ES6 in depth: symbols</a></li>
+<li><a href="http://www.2ality.com/2014/12/es6-symbols.html" target="_blank" rel="external">ES6 symbols</a></li>
+<li><a href="http://blog.keithcirkel.co.uk/metaprogramming-in-es6-symbols/" target="_blank" rel="external">Metaprogramming in ES6: Symbols and why they’re awesome</a></li>
+</ul>
+<p><code>Symbol</code> is a new primitive type.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">typeof</span> <span class="built_in">Symbol</span>()</span><br><span class="line"><span class="string">"symbol"</span></span><br><span class="line"></span><br><span class="line">&gt; <span class="keyword">let</span> symbol = <span class="built_in">Symbol</span>(<span class="string">'symbol'</span>);</span><br><span class="line">&gt; <span class="built_in">String</span>(symbol)</span><br><span class="line"><span class="string">'Symbol(symbol)'</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">- it is immutable once created</span><br><span class="line">- each symbol is unique, distinct from all others (even others that have the same description) </span><br><span class="line">- can’t be automatically converted to strings, use `</span><span class="built_in">String</span>(symbol)<span class="string">` or `</span>symbol.toString()<span class="string">`</span><br><span class="line"></span><br><span class="line">### Used as property keys</span><br><span class="line"></span><br><span class="line">`</span><span class="string">``</span>JavaScript</span><br><span class="line"><span class="comment">// create a unique symbol</span></span><br><span class="line"><span class="keyword">var</span> isMoving = <span class="built_in">Symbol</span>(<span class="string">"isMoving"</span>);</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">if (element[isMoving]) &#123;</span><br><span class="line">  smoothAnimations(element);</span><br><span class="line">&#125;</span><br><span class="line">element[isMoving] = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p><code>element[isMoving]</code> is called a <em>symbol-keyed property</em>.</p>
+<ul>
+<li>it supports <code>if (isMoving in element)</code> or <code>delete element[isMoving]</code></li>
+<li><code>for-in</code> loop only loops over an object’s string keys, as <code>Object.keys(obj)</code> and <code>Object.getOwnPropertyNames(obj)</code></li>
+<li><code>Object.getOwnPropertySymbols(obj)</code> to list the symbol keys of an object</li>
+<li><code>Reflect.ownKeys(obj)</code> returns both string and symbol keys</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  [<span class="built_in">Symbol</span>(<span class="string">'my_key'</span>)]: <span class="number">1</span>,</span><br><span class="line">  enum: <span class="number">2</span>,</span><br><span class="line">  nonEnum: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,  <span class="string">'nonEnum'</span>, &#123; enumerable: <span class="literal">false</span> &#125;);</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">Object</span>.getOwnPropertyNames(obj)</span><br><span class="line">[<span class="string">'enum'</span>, <span class="string">'nonEnum'</span>]</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">Object</span>.getOwnPropertySymbols(obj)</span><br><span class="line">[<span class="built_in">Symbol</span>(my_key)]</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">Reflect</span>.ownKeys(obj)</span><br><span class="line">[<span class="built_in">Symbol</span>(my_key), <span class="string">'enum'</span>, <span class="string">'nonEnum'</span>]</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">Object</span>.keys(obj)</span><br><span class="line">[<span class="string">'enum'</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="Three-sets-of-symbols"><a href="#Three-sets-of-symbols" class="headerlink" title="Three sets of symbols"></a>Three sets of symbols</h3><ul>
+<li>Call <code>Symbol()</code>. This returns a new unique symbol each time it’s called.</li>
+<li>Call <code>Symbol.for(string)</code>. This accesses a set of existing symbols called the <em>global Symbol registry</em>. Unlike the unique symbols defined by <code>Symbol()</code>, symbols in the symbol registry are shared. If you call <code>Symbol.for(&quot;cat&quot;)</code> thirty times, it will return the same symbol each time. The registry is useful when multiple web pages, or multiple modules within the same web page, need to share a symbol.</li>
+<li>Symbols constants like <code>Symbol.iterator</code>, defined by the standard.</li>
+</ul>
+<h4 id="Symbol-hasInstance"><a href="#Symbol-hasInstance" class="headerlink" title="Symbol.hasInstance"></a>Symbol.hasInstance</h4><p><code>lho instanceof rho</code> would call <code>rho[Symbol.hasInstance](lho)</code> (where <code>rho</code> is the right hand operand and <code>lho</code> is the left hand operand). It’s then up to the method to determine if it inherits from that particular instance, or you could implement it:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span>() </span>&#123;  </span><br><span class="line">  <span class="keyword">static</span> [<span class="built_in">Symbol</span>.hasInstance](lho) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(lho);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">assert([] <span class="keyword">instanceof</span> MyClass);</span><br></pre></td></tr></table></figure>
+<h4 id="Symbol-iterator"><a href="#Symbol-iterator" class="headerlink" title="Symbol.iterator"></a>Symbol.iterator</h4><p><code>for of</code> loop calls <code>Symbol.iterator</code> on right hand operand to get values to iterate over.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// with `for of`</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> value <span class="keyword">of</span> myArray) &#123;  </span><br><span class="line">  <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// without `for of`</span></span><br><span class="line"><span class="keyword">var</span> _myArray = myArray[<span class="built_in">Symbol</span>.iterator]();  </span><br><span class="line"><span class="keyword">while</span>(<span class="keyword">var</span> _iteration = _myArray.next()) &#123;  </span><br><span class="line">  <span class="keyword">if</span> (_iteration.done) &#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> value = _iteration.value;</span><br><span class="line"><span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Symbol-match-replace-search-split"><a href="#Symbol-match-replace-search-split" class="headerlink" title="Symbol.match/replace/search/split"></a>Symbol.match/replace/search/split</h4><p><code>String#match/replace/search/split</code> function will now use the symbol to determine if the given value can be used to match against it.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyReplacer</span> </span>&#123;  </span><br><span class="line">  <span class="keyword">constructor</span>(value) &#123;</span><br><span class="line">    <span class="keyword">this</span>.value = value;</span><br><span class="line">&#125;</span><br><span class="line">[<span class="built_in">Symbol</span>.replace](string, replacer) &#123;</span><br><span class="line">    <span class="keyword">var</span> index = string.indexOf(<span class="keyword">this</span>.value);</span><br><span class="line">    <span class="keyword">if</span> (index === <span class="number">-1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> string;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> replacer === <span class="string">'function'</span>) &#123;</span><br><span class="line">      replacer = replacer.call(<span class="literal">undefined</span>, <span class="keyword">this</span>.value, string);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;string.slice(0, index)&#125;</span><span class="subst">$&#123;replacer&#125;</span><span class="subst">$&#123;string.slice(index + this.value.length)&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> fooReplaced = <span class="string">'foobar'</span>.replace(<span class="keyword">new</span> MyReplacer(<span class="string">'foo'</span>), <span class="string">'baz'</span>);  </span><br><span class="line"><span class="keyword">var</span> barMatcher = <span class="string">'foobar'</span>.replace(<span class="keyword">new</span> MyReplacer(<span class="string">'bar'</span>), <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">'baz'</span> &#125;);  </span><br><span class="line">assert.equal(fooReplaced, <span class="string">'bazbar'</span>);  </span><br><span class="line">assert.equal(barReplaced, <span class="string">'foobaz'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="Symbol-species"><a href="#Symbol-species" class="headerlink" title="Symbol.species"></a>Symbol.species</h4><p><code>Symbol.species</code> points to the constructor value of a class, which allows classes to create new versions of themselves within methods.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.map = <span class="function"><span class="keyword">function</span> (<span class="params">callback</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">var</span> Species = <span class="keyword">this</span>.constructor[<span class="built_in">Symbol</span>.species];</span><br><span class="line">  <span class="keyword">var</span> returnValue = <span class="keyword">new</span> Species(<span class="keyword">this</span>.length);</span><br><span class="line">  <span class="keyword">this</span>.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item, index, array</span>) </span>&#123;</span><br><span class="line">    returnValue[index] = callback(item, index, array);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">return</span> returnValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="More"><a href="#More" class="headerlink" title="More"></a>More</h4><p>[More examples] (<a href="http://blog.keithcirkel.co.uk/metaprogramming-in-es6-symbols/" target="_blank" rel="external">http://blog.keithcirkel.co.uk/metaprogramming-in-es6-symbols/</a>)</p>
+<ul>
+<li>Symbol.unscopables</li>
+<li>Symbol.toPrimitive</li>
+<li>Symbol.toStringTag</li>
+<li>Symbol.isConcatSpreadable</li>
+</ul>
+<h2 id="Let-and-Const"><a href="#Let-and-Const" class="headerlink" title="Let and Const"></a>Let and Const</h2><p><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/" target="_blank" rel="external">ES6 In Depth: let and const</a></p>
+<h3 id="Let"><a href="#Let" class="headerlink" title="Let"></a>Let</h3><ul>
+<li><code>let</code> variables are <em>block-scoped</em>. The scope of a variable declared with let is just the enclosing block, not the whole enclosing function.</li>
+<li>Global <code>let</code> variables are not properties on the global object. That is, you won’t access them by writing window.variableName. Instead, they live in the scope of an invisible block that notionally encloses all JS code that runs in a web page.</li>
+<li>Loops of the form for (<code>let x...</code>) create a fresh binding for x in each iteration. </li>
+<li>It’s an error to try to use a let variable before its declaration is reached. </li>
+</ul>
+<h3 id="Const"><a href="#Const" class="headerlink" title="Const"></a>Const</h3><p>Variables declared with <code>const</code> are just like <code>let</code> except that you can’t assign to them, and you can’t declare a <code>const</code> without giving it a value.</p>
+<h2 id="Destructuring"><a href="#Destructuring" class="headerlink" title="Destructuring"></a>Destructuring</h2><p>(ES6 in depth: destructuring)[<a href="https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/" target="_blank" rel="external">https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/</a>]<br><strong>Destructuring assignment</strong> allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. </p>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>/lest/<span class="keyword">const</span> [ variable1, variable2, ..., variableN ] = array;</span><br><span class="line"><span class="comment">// variable1 = array[0]; ...</span></span><br></pre></td></tr></table></figure>
+<p>It can be <strong>nested</strong>: <code>var [foo, [[bar], baz]] = [1, [[2], 3]];</code></p>
+<p>It can be <strong>skipped</strong>: <code>var [,,third] = [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;];</code></p>
+<p>And you can capture all trailing items in an array with a <strong>“rest” pattern</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [head, ...tail] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(tail);</span><br><span class="line"><span class="comment">// [2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+<p>Destructuring assignment with an array assignment pattern also works for any <strong>iterable</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">fibs</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">yield</span> a;</span><br><span class="line">    [a, b] = [b, a + b];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> [first, second, third, fourth, fifth, sixth] = fibs();</span><br><span class="line"><span class="built_in">console</span>.log(sixth);</span><br><span class="line"><span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>Destructuring on objects lets you bind variables to different properties of an object. You specify the property being bound, followed by the variable you are binding its value to.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> robotA = &#123; name: <span class="string">"Bender"</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> &#123; name: nameA &#125; = robotA;</span><br><span class="line"><span class="built_in">console</span>.log(nameA);</span><br><span class="line"><span class="comment">// "Bender"</span></span><br></pre></td></tr></table></figure>
+<p><strong>Shortcut</strong> for when the property and variable names are the same:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> &#123; foo, bar &#125; = &#123; foo: <span class="string">"lorem"</span>, bar: <span class="string">"ipsum"</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(foo);</span><br><span class="line"><span class="comment">// "lorem"</span></span><br><span class="line"><span class="built_in">console</span>.log(bar);</span><br><span class="line"><span class="comment">// "ipsum"</span></span><br></pre></td></tr></table></figure>
+<p>It can be <strong>nested</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> complicatedObj = &#123;</span><br><span class="line">  arrayProp: [</span><br><span class="line">    <span class="string">"Zapp"</span>,</span><br><span class="line">    &#123; second: <span class="string">"Brannigan"</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> &#123; arrayProp: [first, &#123; second &#125;] &#125; = complicatedObj;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(first);</span><br><span class="line"><span class="comment">// "Zapp"</span></span><br><span class="line"><span class="built_in">console</span>.log(second);</span><br><span class="line"><span class="comment">// "Brannigan"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Destructuring-values-that-are-not-an-object-array-or-iterable"><a href="#Destructuring-values-that-are-not-an-object-array-or-iterable" class="headerlink" title="Destructuring values that are not an object, array, or iterable"></a>Destructuring values that are not an object, array, or iterable</h3><p>When you try to use destructuring on <code>null</code> or <code>undefined</code>, you get <code>TypeError</code>. However, you can destructure on other primitive types such as booleans, numbers, and strings, and get <code>undefined</code>.</p>
+<h3 id="Default-values"><a href="#Default-values" class="headerlink" title="Default values"></a>Default values</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [missing = <span class="literal">true</span>] = [];</span><br><span class="line"><span class="built_in">console</span>.log(missing);</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> &#123; message: msg = <span class="string">"Something went wrong"</span> &#125; = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(msg);</span><br><span class="line"><span class="comment">// "Something went wrong"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Practical-applications"><a href="#Practical-applications" class="headerlink" title="Practical applications"></a>Practical applications</h3><h4 id="Function-parameter-definitions"><a href="#Function-parameter-definitions" class="headerlink" title="Function parameter definitions"></a>Function parameter definitions</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeBreakpoint</span>(<span class="params">&#123; url, line, column &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Adding default values:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeBreakpoint</span>(<span class="params">&#123; url="http:<span class="comment">//a.b", line=10, column=100 &#125;) &#123;</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="With-the-ES6-iteration-protocol"><a href="#With-the-ES6-iteration-protocol" class="headerlink" title="With the ES6 iteration protocol"></a>With the ES6 iteration protocol</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">map.set(<span class="built_in">window</span>, <span class="string">"the global"</span>);</span><br><span class="line">map.set(<span class="built_in">document</span>, <span class="string">"the document"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> [key, value] <span class="keyword">of</span> map) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key + <span class="string">" is "</span> + value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// "[object Window] is the global"</span></span><br><span class="line"><span class="comment">// "[object HTMLDocument] is the document"</span></span><br></pre></td></tr></table></figure>
+<h4 id="Multiple-return-values"><a href="#Multiple-return-values" class="headerlink" title="Multiple return values"></a>Multiple return values</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnMultipleValues</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    foo: <span class="number">1</span>,</span><br><span class="line">    bar: <span class="number">2</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> &#123; foo, bar &#125; = returnMultipleValues();</span><br></pre></td></tr></table></figure>
+<h4 id="Importing-names-from-a-CommonJS-module"><a href="#Importing-names-from-a-CommonJS-module" class="headerlink" title="Importing names from a CommonJS module"></a>Importing names from a CommonJS module</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; SourceMapConsumer, SourceNode &#125; = <span class="built_in">require</span>(<span class="string">"source-map"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="Arrow-function"><a href="#Arrow-function" class="headerlink" title="Arrow function"></a>Arrow function</h2><ul>
+<li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/" target="_blank" rel="external">ES6 In Depth: Arrow functions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="external">Arrow functions - MDN</a></li>
+</ul>
+<h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><p>Arrow function is a shorthand for writing functions, with which you can skip writing <code>function</code>, <code>return</code> and braces, etc.<br><strong>Arrow functions do not have their own <code>this</code> value.</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Basic syntax:</span></span><br><span class="line">(param1, param2, paramN) =&gt; &#123; statements &#125;</span><br><span class="line">(param1, param2, paramN) =&gt; expression</span><br><span class="line">   <span class="comment">// equivalent to:  =&gt; &#123; return expression; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Parentheses are optional when there's only one argument:</span></span><br><span class="line">singleParam =&gt; &#123; statements &#125;</span><br><span class="line">singleParam =&gt; expression</span><br><span class="line"></span><br><span class="line"><span class="comment">// A function with no arguments requires parentheses:</span></span><br><span class="line">() =&gt; &#123; statements &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Advanced:</span></span><br><span class="line"><span class="comment">// Parenthesize the body to return an object literal expression:</span></span><br><span class="line">params =&gt; (&#123;foo: bar&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Rest parameters are supported</span></span><br><span class="line">(param1, param2, ...rest) =&gt; &#123; statements &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Return-an-object-literal"><a href="#Return-an-object-literal" class="headerlink" title="Return an object literal"></a>Return an object literal</h3><p>Wrap the expression in parenthesis to return an object literal:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(n =&gt; (&#123; number: n &#125;))</span><br><span class="line"><span class="comment">// &lt;- [&#123; number: 1 &#125;, &#123; number: 2 &#125;, &#123; number: 3 &#125;]</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(n =&gt; (&#123; number: n, something: <span class="string">'else'</span> &#125;))</span><br><span class="line"><span class="comment">/* &lt;- [</span><br><span class="line">  &#123; number: 1, something: 'else' &#125;,</span><br><span class="line">  &#123; number: 2, something: 'else' &#125;,</span><br><span class="line">  &#123; number: 3, something: 'else' &#125;]</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
+<h3 id="Currying"><a href="#Currying" class="headerlink" title="Currying"></a>Currying</h3><p><strong>Currying</strong> is the process of taking <strong>a function</strong> that accepts <strong>N arguments</strong> and turning it into a <strong>chained</strong> series of <strong>N functions</strong> each taking <strong>1 argument</strong>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logger</span>(<span class="params">store</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">wrapDispatchToAddLogging</span>(<span class="params">next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">dispatchAndLog</span>(<span class="params">action</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'dispatching'</span>, action);</span><br><span class="line">      <span class="keyword">let</span> result = next(action);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'next state'</span>, store.getState());</span><br><span class="line">      <span class="keyword">return</span> result;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// will be the same as:</span></span><br><span class="line"><span class="keyword">const</span> logger = store =&gt; next =&gt; action =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'dispatching'</span>, action);</span><br><span class="line">  <span class="keyword">let</span> result = next(action);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'next state'</span>, store.getState());</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// to use logger:</span></span><br><span class="line"><span class="keyword">let</span> dispatch = store.dispatch;</span><br><span class="line">middlewares.forEach(middleware =&gt;</span><br><span class="line">  dispatch = middleware(store)(dispatch)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// to use dispatch:</span></span><br><span class="line">dispatch(action);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag">#JS</a>
+          
+            <a href="/tags/ES6/" rel="tag">#ES6</a>
+          
+            <a href="/tags/dehydration/" rel="tag">#dehydration</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/21/evaluate-flux-in-real-work/" rel="next" title="Evaluate Flux in real work and proposal for next step">
+                <i class="fa fa-chevron-left"></i> Evaluate Flux in real work and proposal for next step
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/28/explain-redux/" rel="prev" title="Learn Redux and React-Redux - Tutorials Dehydrated (WIP)">
+                Learn Redux and React-Redux - Tutorials Dehydrated (WIP) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="xubuild" />
+          <p class="site-author-name" itemprop="name">xubuild</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Disclaimer"><span class="nav-number">1.</span> <span class="nav-text">Disclaimer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Compatibility"><span class="nav-number">2.</span> <span class="nav-text">Compatibility</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Module"><span class="nav-number">3.</span> <span class="nav-text">Module</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Export"><span class="nav-number">3.1.</span> <span class="nav-text">Export</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Export-list"><span class="nav-number">3.1.1.</span> <span class="nav-text">Export list</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Renaming"><span class="nav-number">3.1.2.</span> <span class="nav-text">Renaming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Default"><span class="nav-number">3.1.3.</span> <span class="nav-text">Default</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Import"><span class="nav-number">3.2.</span> <span class="nav-text">Import</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Renaming-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">Renaming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#From-CommonJS-and-AMD-module"><span class="nav-number">3.2.2.</span> <span class="nav-text">From CommonJS and AMD module</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Import-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">Import *</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aggregating-modules"><span class="nav-number">3.3.</span> <span class="nav-text">Aggregating modules</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-does-import-actually-do"><span class="nav-number">3.4.</span> <span class="nav-text">What does import actually do?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class"><span class="nav-number">4.</span> <span class="nav-text">Class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">4.1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition-and-Class-expression"><span class="nav-number">4.2.</span> <span class="nav-text">Definition and Class expression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">4.3.</span> <span class="nav-text">Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Constructor"><span class="nav-number">4.3.1.</span> <span class="nav-text">Constructor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-method"><span class="nav-number">4.3.2.</span> <span class="nav-text">Static method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prototype-method"><span class="nav-number">4.3.3.</span> <span class="nav-text">Prototype method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Getters-and-setters"><span class="nav-number">4.3.4.</span> <span class="nav-text">Getters and setters</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Computed-method-names"><span class="nav-number">4.3.5.</span> <span class="nav-text">Computed method names</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbols-in-method-name"><span class="nav-number">4.3.6.</span> <span class="nav-text">Symbols in method name</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Generator-method"><span class="nav-number">4.3.7.</span> <span class="nav-text">Generator method</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Subclassing"><span class="nav-number">4.4.</span> <span class="nav-text">Subclassing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Subclassing-built-in-constructors"><span class="nav-number">4.4.1.</span> <span class="nav-text">Subclassing built-in constructors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Symbol"><span class="nav-number">5.</span> <span class="nav-text">Symbol</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Three-sets-of-symbols"><span class="nav-number">5.1.</span> <span class="nav-text">Three sets of symbols</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol-hasInstance"><span class="nav-number">5.1.1.</span> <span class="nav-text">Symbol.hasInstance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol-iterator"><span class="nav-number">5.1.2.</span> <span class="nav-text">Symbol.iterator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol-match-replace-search-split"><span class="nav-number">5.1.3.</span> <span class="nav-text">Symbol.match/replace/search/split</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol-species"><span class="nav-number">5.1.4.</span> <span class="nav-text">Symbol.species</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#More"><span class="nav-number">5.1.5.</span> <span class="nav-text">More</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Let-and-Const"><span class="nav-number">6.</span> <span class="nav-text">Let and Const</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Let"><span class="nav-number">6.1.</span> <span class="nav-text">Let</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Const"><span class="nav-number">6.2.</span> <span class="nav-text">Const</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Destructuring"><span class="nav-number">7.</span> <span class="nav-text">Destructuring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array"><span class="nav-number">7.1.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">7.2.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Destructuring-values-that-are-not-an-object-array-or-iterable"><span class="nav-number">7.3.</span> <span class="nav-text">Destructuring values that are not an object, array, or iterable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Default-values"><span class="nav-number">7.4.</span> <span class="nav-text">Default values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Practical-applications"><span class="nav-number">7.5.</span> <span class="nav-text">Practical applications</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Function-parameter-definitions"><span class="nav-number">7.5.1.</span> <span class="nav-text">Function parameter definitions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#With-the-ES6-iteration-protocol"><span class="nav-number">7.5.2.</span> <span class="nav-text">With the ES6 iteration protocol</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiple-return-values"><span class="nav-number">7.5.3.</span> <span class="nav-text">Multiple return values</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Importing-names-from-a-CommonJS-module"><span class="nav-number">7.5.4.</span> <span class="nav-text">Importing names from a CommonJS module</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arrow-function"><span class="nav-number">8.</span> <span class="nav-text">Arrow function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics"><span class="nav-number">8.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Return-an-object-literal"><span class="nav-number">8.2.</span> <span class="nav-text">Return an object literal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Currying"><span class="nav-number">8.3.</span> <span class="nav-text">Currying</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xubuild</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

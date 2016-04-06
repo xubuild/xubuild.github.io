@@ -1,0 +1,655 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS,dehydration,Redux,React,Flux," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="The best way to learn Redux: 
+
+videos by redux author
+read the doc and source code!
+
+Disclaimer and ReferencesThis post is a dehydration and restructuring of different articles and most content are co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learn Redux and React-Redux - Tutorials Dehydrated (WIP)">
+<meta property="og:url" content="http://xubuild.github.io/2015/10/28/explain-redux/index.html">
+<meta property="og:site_name" content="XUBUILD">
+<meta property="og:description" content="The best way to learn Redux: 
+
+videos by redux author
+read the doc and source code!
+
+Disclaimer and ReferencesThis post is a dehydration and restructuring of different articles and most content are co">
+<meta property="og:updated_time" content="2016-04-06T08:51:43.767Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learn Redux and React-Redux - Tutorials Dehydrated (WIP)">
+<meta name="twitter:description" content="The best way to learn Redux: 
+
+videos by redux author
+read the doc and source code!
+
+Disclaimer and ReferencesThis post is a dehydration and restructuring of different articles and most content are co">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> Learn Redux and React-Redux - Tutorials Dehydrated (WIP) | XUBUILD </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+<div class="site-fancy-title">
+      <svg viewBox="0 0 1320 300">
+
+        <!-- Symbol -->
+        <symbol id="s-text">
+          <text text-anchor="middle"
+                x="50%" y="50%" dy=".35em">
+            XUBUILD
+          </text>
+        </symbol>  
+
+        <!-- Duplicate symbols -->
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+
+      </svg>
+      </div>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Learn Redux and React-Redux - Tutorials Dehydrated (WIP)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-10-28T00:00:00+00:00" content="2015-10-28">
+              2015-10-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Dev/" itemprop="url" rel="index">
+                    <span itemprop="name">Dev</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>The best way to learn Redux: </p>
+<ul>
+<li><a href="https://egghead.io/series/getting-started-with-redux" target="_blank" rel="external">videos by redux author</a></li>
+<li>read the doc and source code!</li>
+</ul>
+<h2 id="Disclaimer-and-References"><a href="#Disclaimer-and-References" class="headerlink" title="Disclaimer and References"></a>Disclaimer and References</h2><p>This post is a dehydration and restructuring of different articles and most content are copied WITHOUT quotation for easier reading. All credits go to those nice articles!</p>
+<ul>
+<li><a href="http://rackt.org/redux/index.html" target="_blank" rel="external">Redux doc</a></li>
+<li><a href="http://www.alloyteam.com/2015/09/react-redux/" target="_blank" rel="external">React 数据流管理架构之 Redux 介绍</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><blockquote>
+<p>Redux is a predictable state container for JavaScript apps.</p>
+<ul>
+<li>The whole state of your app is stored in an object tree inside a single <strong>store</strong>.</li>
+<li>The only way to change the state tree is to emit an <strong>action</strong>, an object describing what happened.</li>
+<li>To specify how the actions transform the state tree, you write pure <strong>reducers</strong>.</li>
+</ul>
+</blockquote>
+<p><a name="action"></a></p>
+<h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><p><code>action</code> is plain JS object used to define/trigger a change in store. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  type: <span class="string">'ADD_FILM'</span>,</span><br><span class="line">  name: <span class="string">'Mission: Impossible'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a name="helper-action-creator"></a></p>
+<h4 id="Helper-Action-Creator"><a href="#Helper-Action-Creator" class="headerlink" title="Helper: Action Creator"></a>Helper: Action Creator</h4><p>Helper functions to create actions:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addFilm</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123; type: <span class="string">'ADD_FILM'</span>, name: name &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a name="reducer"></a></p>
+<h3 id="Reducer"><a href="#Reducer" class="headerlink" title="Reducer"></a>Reducer</h3><p>Reducer is a function. It takes an <strong>action</strong> and transform the <strong>old state</strong> to <strong>new state</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reducer = (oldState, action) =&gt; newState;</span><br></pre></td></tr></table></figure>
+<p>It should stay <strong>pure</strong>, so you should <strong>NOT</strong>:</p>
+<ul>
+<li>Mutate the old state and action;</li>
+<li>Perform side effects like API calls and routing transitions;</li>
+<li>Calling non-pure functions, e.g. <code>Date.now()</code> or <code>Math.random()</code>.</li>
+</ul>
+<p>In a reducer, the previous state should be returned in the <code>default</code> case. It’s important to return the previous state for any unknown action.</p>
+<p>[object spread syntax] (<a href="https://github.com/sebmarkbage/ecmascript-rest-spread" target="_blank" rel="external">https://github.com/sebmarkbage/ecmascript-rest-spread</a>)</p>
+<p>filmReducer:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">filmReducer</span>(<span class="params">state = [], action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'ADD_FILM'</span>:</span><br><span class="line">      <span class="keyword">return</span> [&#123;</span><br><span class="line">          id: action.id,</span><br><span class="line">          name: action.name</span><br><span class="line">      &#125;, ...state];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="string">'DELETE_FILM'</span>:</span><br><span class="line">      <span class="keyword">return</span> state.films.filter(film =&gt;</span><br><span class="line">          film.id !== action.id</span><br><span class="line">          );</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Combined rootReducer:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rootReducer</span>(<span class="params">state = &#123;&#125;, action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    films: filmReducer(state.films, action),</span><br><span class="line">    filter: filterReducer(state.filter, action)</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>rootReducer will pass different part of <code>state</code> to corresponding <code>reducers</code>, and combine the results to a new <code>state</code>.</p>
+<p><a name="helper-combinereducers"></a></p>
+<h4 id="Helper-combineReducers"><a href="#Helper-combineReducers" class="headerlink" title="Helper: combineReducers"></a>Helper: combineReducers</h4><p><code>combineReducers()</code> is used to simplify the combination:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rootReducer = combineReducers(&#123;</span><br><span class="line">    films: filmReducer,</span><br><span class="line">    filter: filterReducer</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>One <code>action</code> will go through all <code>reducers</code>. There will be <strong>one single root reducer</strong>.</p>
+<p><a name="store"></a></p>
+<h3 id="Store"><a href="#Store" class="headerlink" title="Store"></a>Store</h3><p>There is only one store in a Redux app and it has the following responsibilities:</p>
+<ul>
+<li>Holds application state;</li>
+<li>Allows access to state via <code>getState()</code>;</li>
+<li>Allows state to be updated via <code>dispatch(action)</code>;</li>
+<li>Registers listeners via <code>subscribe(listener)</code>.</li>
+</ul>
+<p>You’ll only have a single store in a Redux application. When you want to split your data handling logic, you’ll use reducer composition instead of many stores.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> store = createStore(REDUCER, INITIAL_STATE);</span><br></pre></td></tr></table></figure>
+<p>Store provides 3 methods: <code>dispatch</code>, <code>subscribe</code> and <code>getState</code>. It could be sth like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createStore</span>(<span class="params">reducer, initialState</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> currentReducer = reducer;</span><br><span class="line">    <span class="keyword">var</span> currentState = initialState;</span><br><span class="line">    <span class="keyword">var</span> listeners = [];</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getState</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> currentState;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">subscribe</span>(<span class="params">listener</span>) </span>&#123;</span><br><span class="line">      listeners.push(listener);</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">unsubscribe</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> index = listeners.indexOf(listener);</span><br><span class="line">        listeners.splice(index, <span class="number">1</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">dispatch</span>(<span class="params">action</span>) </span>&#123;</span><br><span class="line">        currentState = currentReducer(currentState, action);</span><br><span class="line">        listeners.slice().forEach(listener =&gt; listener());</span><br><span class="line">        <span class="keyword">return</span> action;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      dispatch,</span><br><span class="line">      subscribe,</span><br><span class="line">      getState</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="React-and-Redux"><a href="#React-and-Redux" class="headerlink" title="React and Redux"></a>React and Redux</h2><p><a href="https://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux" target="_blank" rel="external">Why use Redux over Facebook Flux</a></p>
+<p><a name="provider"></a></p>
+<h3 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h3><p><code>Provider</code> makes our <code>store</code> instance available to the components below. (Internally, this is done via React’s <a href="https://facebook.github.io/react/docs/context.html" target="_blank" rel="external">context</a> feature.)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./containers/App'</span>;</span><br><span class="line"><span class="keyword">import</span> todoApp <span class="keyword">from</span> <span class="string">'./reducers'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> store = createStore(todoApp);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> rootElement = <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>);</span><br><span class="line">render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &lt;App /&gt;</span><br><span class="line">  &lt;/Provider&gt;,</span><br><span class="line">  rootElement</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>In <code>App</code> component and its sub-components, you can use <code>connect</code> to make <code>store</code> available for them.</p>
+<p><a name="connect"></a></p>
+<h3 id="Connect"><a href="#Connect" class="headerlink" title="Connect"></a>Connect</h3><p><code>Connect</code> will Wrap the top-level component or route handlers and return a new component. It will do the following things:</p>
+<ul>
+<li>passing <code>store</code>‘s <code>dispatch</code> function as <em>wrapped component</em>‘s prop <code>dispatch</code></li>
+<li>passing data (from the global state, part which it needs) as <em>wrapped component</em>‘s prop</li>
+<li>internally, <code>store</code> will <code>subscribe</code> the <em>wrapper component</em>‘s <code>handleChange()</code>. So is the store’s state changes, it will call <code>handleChange</code>, which calls <code>this.setState</code> and triggers re-render.  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FilmApp</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// injected from connect()</span></span><br><span class="line">    <span class="keyword">const</span> &#123; films, dispatch &#125; = <span class="keyword">this</span>.props;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          // addFilm is action creator which returns action object</span><br><span class="line">          &lt;AddFilm </span><br><span class="line">            films=&#123;films&#125; </span><br><span class="line">            onAddClick=&#123;name =&gt; dispatch(addFilm(name))&#125;</span><br><span class="line">          /&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// select which part of state is needed from global state</span><br><span class="line">function select(state) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    films: state.films</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default connect(select)(FilmApp);</span><br></pre></td></tr></table></figure>
+<p><a name="helper-bindactioncreators"></a></p>
+<h3 id="Helper-bindActionCreators"><a href="#Helper-bindActionCreators" class="headerlink" title="Helper: bindActionCreators"></a>Helper: bindActionCreators</h3><p>Normally you should just call <code>dispatch</code> directly on your Store instance.<br>When you want to pass some action creators down to a component that isn’t aware of Redux, and you don’t want to pass <code>dispatch</code> or the Redux <code>store</code> to it, use <code>bindActionCreators</code>. It is a encapsulation of <code>action</code> (action creator) and <code>store.dispatch</code>.</p>
+<p>It turns an object whose values are <code>action creators</code>, into an object with the same keys, but with every <code>action creator</code> wrapped into a <code>dispatch</code> call so they may be invoked directly.</p>
+<p>FilmActionCreators.js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addFilm</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123; type: <span class="string">'ADD_FILM'</span>, name: name &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteFilm</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123; type: <span class="string">'ADD_FILM'</span>, name: name &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> FilmActionCreators <span class="keyword">from</span> <span class="string">'./FilmActionCreators'</span>;</span><br><span class="line">render() &#123;</span><br><span class="line"><span class="keyword">let</span> filmActions = bindActionCreators(FilmActionCreators, dispatch);</span><br><span class="line"><span class="comment">// console.log(filmActions);</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//    addFilm : function,</span></span><br><span class="line"><span class="comment">//    deleteFilm : function</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">      &lt;AddFilm action=&#123;filmActions.addFilm&#125; /&gt;</span><br><span class="line">      &lt;Main actions=&#123;filmActions&#125;&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag">#JS</a>
+          
+            <a href="/tags/dehydration/" rel="tag">#dehydration</a>
+          
+            <a href="/tags/Redux/" rel="tag">#Redux</a>
+          
+            <a href="/tags/React/" rel="tag">#React</a>
+          
+            <a href="/tags/Flux/" rel="tag">#Flux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/22/learnES6/" rel="next" title="Learn ES6 - Tutorials Dehydrated (WIP)">
+                <i class="fa fa-chevron-left"></i> Learn ES6 - Tutorials Dehydrated (WIP)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/02/promise-and-how-to-do-ajax-request/" rel="prev" title="Promise (Tutorials Dehydrated) and ajax request library">
+                Promise (Tutorials Dehydrated) and ajax request library <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="xubuild" />
+          <p class="site-author-name" itemprop="name">xubuild</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Disclaimer-and-References"><span class="nav-number">1.</span> <span class="nav-text">Disclaimer and References</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redux"><span class="nav-number">2.</span> <span class="nav-text">Redux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Action"><span class="nav-number">2.1.</span> <span class="nav-text">Action</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Helper-Action-Creator"><span class="nav-number">2.1.1.</span> <span class="nav-text">Helper: Action Creator</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reducer"><span class="nav-number">2.2.</span> <span class="nav-text">Reducer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Helper-combineReducers"><span class="nav-number">2.2.1.</span> <span class="nav-text">Helper: combineReducers</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Store"><span class="nav-number">2.3.</span> <span class="nav-text">Store</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-and-Redux"><span class="nav-number">3.</span> <span class="nav-text">React and Redux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Provider"><span class="nav-number">3.1.</span> <span class="nav-text">Provider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connect"><span class="nav-number">3.2.</span> <span class="nav-text">Connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Helper-bindActionCreators"><span class="nav-number">3.3.</span> <span class="nav-text">Helper: bindActionCreators</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xubuild</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
